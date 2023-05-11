@@ -19,7 +19,7 @@ provider "checkpoint" {
 
 resource "checkpoint_management_service_tcp" "create-port" {
   name = var.cp-service-name
-  port = var.cp-port
+  port = 8888
   keep_connections_open_after_policy_installation = false
   session_timeout = 0
   match_for_any = true
