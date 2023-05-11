@@ -3,4 +3,4 @@ username = ""
 password = ""
 context  = ""
 cp-service-name = ""
-cp-port = ""
+cp-port = 0
