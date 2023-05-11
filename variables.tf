@@ -13,7 +13,7 @@ variable "cp-mgmt-context" {
  
 }
 
-variable "cp-service-name" {
+/*variable "cp-service-name" {
  
 }
 

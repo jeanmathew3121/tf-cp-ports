@@ -2,5 +2,5 @@ server = ""
 username = ""
 password = ""
 context  = ""
-cp-service-name = ""
-cp-port = 0
+//cp-service-name = ""
+//cp-port = 0

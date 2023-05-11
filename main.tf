@@ -18,17 +18,9 @@ provider "checkpoint" {
 
 
 resource "checkpoint_management_service_tcp" "create-port" {
-  name = var.cp-service-name
+  name = "sssss"
   port = 45432
-  keep_connections_open_after_policy_installation = false
-  session_timeout = 0
-  match_for_any = true
-  sync_connections_on_cluster = true
-  aggressive_aging = {
-    enable = true
-    timeout = 360
-    use_default_timeout = false
-  }
+
 }
 
 resource "checkpoint_management_publish" "example" { }
