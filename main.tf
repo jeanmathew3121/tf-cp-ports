@@ -27,7 +27,8 @@ resource "checkpoint_management_service_tcp" "create-port" {
   aggressive_aging = {
     enable = true
     timeout = 360
-    use_default_timeout = fals
+    use_default_timeout = false
+  }
 }
 
 resource "checkpoint_management_publish" "example" { }
