@@ -18,5 +18,5 @@ variable "cp-service-name" {
 }
 
 variable "cp-port" {
- 
+    type = number
 }
