@@ -2,7 +2,7 @@ terraform {
   required_providers {
     checkpoint = {
       source  = "checkpointsw/checkpoint"
-      version = "~> 1.6.0"
+      //version = "~> 1.6.0"
     }
   }
 }
@@ -19,7 +19,7 @@ provider "checkpoint" {
 
 resource "checkpoint_management_service_tcp" "create-port" {
   name = var.cp-service-name
-  port = 8888
+  port = 45432
   keep_connections_open_after_policy_installation = false
   session_timeout = 0
   match_for_any = true
