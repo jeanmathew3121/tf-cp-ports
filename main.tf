@@ -13,6 +13,7 @@ provider "checkpoint" {
   username = var.cp-mgmt-username
   password = var.cp-mgmt-password
   context  = var.cp-mgmt-context
+  session_name = "terraform_session"
 }
 
 
@@ -23,4 +24,9 @@ resource "checkpoint_management_service_tcp" "create-port" {
 
 }
 
-resource "checkpoint_management_publish" "example" { }
+resource "checkpoint_management_publish" "publish" { }
+resource "checkpoint_management_logout" "example" {
+  depends_on = [
+    checkpoint_management_publish.publish
+ ]
+}
