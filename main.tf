@@ -24,7 +24,11 @@ resource "checkpoint_management_service_tcp" "create-port" {
 
 }
 
-resource "checkpoint_management_publish" "publish" { }
+resource "checkpoint_management_publish" "publish" {
+    depends_on = [
+    checkpoint_management_service_tcp.create-port
+ ]
+ }
 resource "checkpoint_management_logout" "example" {
   depends_on = [
     checkpoint_management_publish.publish
