@@ -19,8 +19,8 @@ provider "checkpoint" {
 
 
 resource "checkpoint_management_service_tcp" "create-port" {
-  name = "sssss"
-  port = 45432
+  name = var.port_name
+  port = var.tcp_port
 
 }
 
